@@ -1,0 +1,15 @@
+{
+  "name": "idmp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IDMP — from a natural-language prompt to a live, queryable database",
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev:api": "npm run dev:memory --workspace=@idmp/server",
+    "dev:web": "npm run dev --workspace=@idmp/web",
+    "seed": "npm run seed --workspace=@idmp/server",
+    "test": "npm test --workspace=@idmp/server",
+    "build": "npm run build --workspace=@idmp/server && npm run build --workspace=@idmp/web"
+  }
+}
